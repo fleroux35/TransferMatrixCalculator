@@ -195,7 +195,7 @@ class PlotPopUp(QObject):
         x = plotData.X
         z = plotData.Z
         
-        np.savetxt('C:\\Users\\leroux\\Desktop\\Controversy Article\\Curves\\CurrentX.csv', x, delimiter=',')
+        np.savetxt('', x, delimiter=',')
         
         counter = 0
         
@@ -205,7 +205,7 @@ class PlotPopUp(QObject):
         
         for zcolumn in z:
             
-            np.savetxt('C:\\Users\\leroux\\Desktop\\Controversy Article\\Curves\\CurrentY{}.csv'.format(printcounter), zcolumn, delimiter=',')
+            np.savetxt(''.format(printcounter), zcolumn, delimiter=',')
             printcounter = printcounter + 1            
             
             for zeltIdx, zelt in enumerate(zcolumn):
@@ -250,7 +250,7 @@ class PlotPopUp(QObject):
         
         for zidx, zcolumn in enumerate(z):
             
-            np.savetxt('C:\\Users\\leroux\\Desktop\\Controversy Article\\Curves\\CurrentYBT{}.csv'.format(printcounter), zcolumn, delimiter=',')          
+            np.savetxt(''.format(printcounter), zcolumn, delimiter=',')          
             
             printcounter = printcounter + 1
             
@@ -277,8 +277,8 @@ class PlotPopUp(QObject):
             
             zYcolumn = zY[zXidx]
             
-            np.savetxt('C:\\Users\\leroux\\Desktop\\Controversy Article\\Curves\\CurrentYXT{}.csv'.format(printcounter), zXcolumn, delimiter=',')          
-            np.savetxt('C:\\Users\\leroux\\Desktop\\Controversy Article\\Curves\\CurrentYYT{}.csv'.format(printcounter), zYcolumn, delimiter=',') 
+            np.savetxt(''.format(printcounter), zXcolumn, delimiter=',')          
+            np.savetxt(''.format(printcounter), zYcolumn, delimiter=',') 
             
             printcounter = printcounter + 1            
             
@@ -308,68 +308,7 @@ if __name__ == "__main__":
     
     popup = PlotPopUp()
     
-    # Test 1 Resonance Glassy PFO
-    
-    #orderName = 'Al100.0PFO90.0Al30.01070121060010'
-    
-    #with open(str('ComputedSimulations\Al100.0PFO90.0Al30.01070121060010E'+'.txt'), 'rb') as f:
-        #packed = pickle.load(f)
-
-        #X = packed[0]
-        #Ye = packed[1]
-        #Zs = packed[2]
-        #Zp = packed[3]                
-     
-    ##popup.plotSurf(plotData(X,Ye,Zs,Zp), False, False, False, False,'TE',orderName,True)     
-    
-    #fitData = plotData(X,Ye,Zs,Zp)
-    
-    #lb = [2.5 , -1, 3.25, 0.8, -1, 1.5, 2.8]
-
-    #ub = [3.25, -1, 4.8, 1.2, -1, 1.7, 3.5]
-
-    #co = com.coupledOscillators(orderName, fitData,'TE', 1, [3.25], lb, ub)
-    
-    #ERabi, neff, E0, polaritonsExp, polaritonsFitted, excitonLines, cavityModesFitted = co.fitData()
-    
-    #print('Rabi:{},neff:{},E0:{}'.format(ERabi, neff, E0))
-    
-    #popup.plotSurf(plotData(X,Ye,Zs,Zp), polaritonsFitted, polaritonsExp, cavityModesFitted, excitonLines,'TE',orderName,True, 2.5, 4.8)
-    
-    # Test 2 Resonances Beta PFO
-    
-    #orderName = 'Al100.0PFO15890.0Al25.01070121060010'
-    
-    #with open(str('ComputedSimulations\Al100.0PFO15890.0Al25.01070121060010E'+'.txt'), 'rb') as f:
-        #packed = pickle.load(f)
-
-        #X = packed[0]
-        #Ye = packed[1]
-        #Z = packed[2]
-        
-        ##pick TE
-    
-    #print(X.size)
-    #print(Ye.size)            
-    #print(Z.size)
-    #fitData = plotData(X,Ye,Z)
-    
-    #lb = [2.0 , 2.84, 3.25, 0.7, 0.05, 1.5, 2.8]
-
-    #ub = [2.84, 3.25, 4.8, 1.3, 0.3, 1.8, 3.5]
-
-    #co = com.coupledOscillators(orderName, fitData,'TE', 2, [3.25, 2.84], lb, ub)
-    
-    #RabiEnergies, neff, E0, polaritonsExp, polaritonsFitted, excitonLines, cavityModesFitted = co.fitData()
-    
-    #print('Rabi1:{},Rabi2:{},neff:{},E0:{}'.format(RabiEnergies[0], RabiEnergies[1], neff, E0))
-    
-    #popup.plotSurf(plotData(X,Ye,Z), polaritonsFitted, polaritonsExp, cavityModesFitted, excitonLines,'TE',orderName,True, 2.5, 4.8)
-    
-    # Test PFO
-    
-    fileName = 'C:\\Users\\leroux\\Google Drive\\Research\\MyPapers\\Aligned Cavities\\Project Data\\FullDataSets\\TestDataSet\\Pickle\\dataBin8ProcessedWthPFONAV.txt'
-
+    fileName = ''
     with open(fileName,'rb') as f:
         packed = pickle.load(f)
 
@@ -379,16 +318,16 @@ if __name__ == "__main__":
 
         fitData = plotData(X,Y,Z)
 
-    lb = [2.5 , -1, 3.25, 0.8, -1, 1.5, 2.8]
+    lb = []
 
-    ub = [3.25, -1, 4.8, 1.2, -1, 1.7, 3.5]
+    ub = []
 
-    me = com.coupledOscillators('S3Exp12TE',fitData,'TE', 1, [3.25], lb, ub)
+    me = com.coupledOscillators('',fitData,'TE', 1, [3.25], lb, ub)
 
     #print('Eex:{},Rabi:{},neff:{},E0:{}'.format(Eex, ERabi, neff, E0))
 
     RabiEnergies, neff, E0, polaritonsExp, polaritonsFitted, excitonLines, cavityModesFitted = me.fitData()
     
-    popup.plotSurf(fitData, polaritonsFitted, False, cavityModesFitted, excitonLines,'TE', 'S3Exp12',True, 2.5, 4.5, 0.6, 0.95, 'RdBu')
+    popup.plotSurf(fitData, polaritonsFitted, False, cavityModesFitted, excitonLines,'TE', '',True, 0, 0, 0, 0, 'RdBu')
 
     #me.plotTestDataOneResonance( 3.25, RabiEnergies[0], neff, E0)
