@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 # -*- coding: utf-8 -*-
 
 import sys
