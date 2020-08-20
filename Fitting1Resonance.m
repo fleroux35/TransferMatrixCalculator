@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 function [x] = Fitting1Resonance(AngleData, wLPdata, wUPdata, w1, lbO10, ubO10, lbneff, ubneff, lbE0, ubE0, p_init) 
 
 % lb is the lowerbound definition on all paramers x
