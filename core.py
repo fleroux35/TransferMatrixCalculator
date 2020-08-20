@@ -1,4 +1,4 @@
-##added modification for normal incidence case - Florian Le Roux
+# #added modification for normal incidence case - Florian Le Roux
 ## based on Analysis of multilayer thin-film structures containing magneto
 ## optic and anisotropic media at oblique incidence using 2x2 matrices -
 ## Mansuripur JAP 67
