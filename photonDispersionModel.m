@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 function [ wcav ] = photonDispersionModel(neff, AngleData, w0)
 
 %Formulas can be found in 'Polariton trap in microcavities with metallic
