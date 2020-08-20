@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 function [maxEnergy1, maxEnergy2] = computeMaximum(energies, curveName, midIndex)
 
 curve = importdata(curveName)
