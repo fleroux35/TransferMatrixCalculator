@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 function [Polaritons] = TwoResonanceEngine(x,Angle) %x is the sextuplet [w1,w2,O1,O2,neff,E0]
 
 syms w1 w2 O10 O20 neff E0 O1 O2 D wcav
