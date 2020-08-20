@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 import numpy as np
 
 class CalculationInfo():
