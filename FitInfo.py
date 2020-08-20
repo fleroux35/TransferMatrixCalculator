@@ -1,4 +1,4 @@
-    
+# Author: Florian Le Roux   
 class FitInfo():
     
 #this class prepares all the info necessary for fitting
