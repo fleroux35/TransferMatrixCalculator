@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 function [ polaritonEnergies ] = OneResonanceEngine(x,AngleData) %x is the quadruplet [wex,O0,neff,E0]
 
 if size(AngleData,1) == 1
