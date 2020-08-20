@@ -1,4 +1,6 @@
+# Author: Florian Le Roux
 # -*- coding: utf-8 -*-
+
 # libraries
 import numpy as np # numpy
 import pickle
