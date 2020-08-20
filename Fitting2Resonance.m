@@ -1,3 +1,4 @@
+# Author: Florian Le Roux
 function [x, ci] = Fitting2Resonance(AngleData, wLPdata, wMPdata, wUPdata, w1, w2, lbO10, ubO10, lbO20, ubO20, lbneff, ubneff, lbE0, ubE0, p_init)
 
 % w1 and w2 are to be entered in eV
